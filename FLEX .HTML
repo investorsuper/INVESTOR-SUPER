@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+    <HEad>
+        <TItle>PRACTICE FLEXBOX </TItle>
+
+        
+
+    </HEad>
+    
+
+
+    <STYLE>
+        .SEARCH-BAR{  
+           flex: 1; 
+           height: 36PX;
+           padding-left: 10PX;
+           font-size: 16PX;
+           border-width: 1PX;
+           border-style: solid;
+           border-radius: 2PX;
+           border-color: rgb(192, 190, 190);
+           border-radius: 2PX;
+           box-shadow: inset 1PX 2PX 2PX 
+           RGBA(0,0,0,0.0.5);
+           width: 0;
+}
+   
+.SEARCH-BAR::placeholder{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 16PX;
+}
+
+
+
+.SEARCH-ICON{
+    height: 25px;  
+    border-radius: 15px;
+}
+
+
+
+.SEARCH-BUTTON{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40PX;
+    width: 60PX;
+    background-color: rgb(236, 234, 234);
+    border-width: 1PX;
+    border-style: solid;
+    margin-left: -1PX;
+    margin-right: 10PX;
+    border-color: rgb(240, 233, 233);
+    position: relative;
+    border-radius: 2PX;
+   
+}
+.SEARCH-BUTTON .tooltip,
+.VOICE-BUTTON .search-voice,
+.HUMBERGUER-CONTAINER .SEARCH-HUMBERGUER{
+font-size: 18px;
+font-family: Arial, Helvetica, sans-serif;
+    position: absolute; 
+   background-color: gray;
+   color: white;
+   padding-top: 4px;
+   padding-bottom: 4PX;
+   padding-left: 8PX;
+   padding-right: 8PX;
+   border-radius: 2OPX;
+   font-size: 12PX;
+   bottom: -30PX;
+   opacity: 0;
+   transition: opacity 0;
+   pointer-events: none;
+   
+   
+}
+.SEARCH-BUTTON:hover .tooltip,
+.VOICE-BUTTON:hover .search-voice,
+.HUMBERGUER-CONTAINER:hover .SEARCH-HUMBERGUER{
+
+   opacity: 1;
+}
+
+
+
+
+
+
+
+.VOICE-BUTTON{
+    height: 30PX;
+    width: 30px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 1px;
+    background-color: rgb(245, 244, 244);
+    
+}
+
+
+
+.VOICE-ICON{
+    height: 16px;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+
+
+
+
+
+        .HEADER{
+            height: 55PX;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+           
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            background-color: white;
+            border-BOTTOM-width: 1PX;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(236, 233, 233);
+        }
+.MIDDLE-SECTION{ 
+    flex: 1; 
+      margin-left: 76PX;
+    margin-right: 50PX;
+    max-width: 500PX;
+    display: flex;
+    align-items: center;
+    
+    
+}
+.LEFT-SECTION{
+    
+    width: 200PX;
+    height: 55PX;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20PX;
+    flex-shrink: 0;
+}
+
+.PROFILE-PICTURE{
+   height: 34PX;
+    border-radius: 15PX;
+    
+   
+}
+
+.NOTIFICATION,
+.APP{ 
+    height: 24PX;
+    
+}
+    
+
+
+
+   
+
+
+
+.UNDER{
+    width: 40PX;
+   border-radius: 10PX;
+    
+    
+}
+
+
+
+
+
+
+
+
+.RIGHT-SECTION{
+    
+    height: 55PX;
+    align-items: center;
+    display: flex;
+   
+}
+
+.YOUTUBE{
+    height: 50PX;
+    margin-left: 30PX
+}
+.YOUTUBE2{
+    height: 40PX;
+    margin-left: 34PX;
+    margin-right: 24PX;
+}
+
+
+
+.BIG-IMAGE{
+    width: 400px;
+    border-radius: 4PX;
+    
+    
+}
+.SMALL-IMAGE{
+    height: 50px;
+    border-radius: 50px;
+}
+.VIDEO-TITLE{
+    width: 340px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
+.VIDEO-AUTHOR{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 350px;
+    color: rgb(164, 223, 164);
+    margin-top: 1px;
+}
+.VIDEO-STATIC{
+    font-size: 12px;
+    color: rgb(145, 139, 139);
+    font-weight: bold;
+    margin-top: 30px;
+}
+.VIDEO-CHANNEL{
+     display: inline-block
+    
+}
+.SMALL-PICTURE{
+    display: inline-block;
+    vertical-align:100PX;
+   
+}
+.MAINOR-SECTION,
+.MAIN-SECTION{
+    display: inline-block;
+    margin-left: 4px;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+.sidebar{ 
+    width: 72px;
+    left: 0;
+    bottom: 0;
+    top: 73px;
+    position: fixed;
+    z-index: 200;
+    padding-top:5pxpx;
+}
+
+
+.sidebar-icon{
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    }
+
+.sidebar-icon img{
+    width: 30px; 
+    margin-bottom: 4px;
+}
+
+.sidebar-icon div{
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 11px;
+}
+.sidebar-icon:hover{
+    background-color: rgb(172, 168, 168);
+}
+
+
+.VIDEO-GRID{
+    display: grid;
+    grid-template-columns: 1FR 1FR 1FR;
+    column-gap: 6PX;
+    row-gap: 30PX;
+   
+    
+
+}
+
+
+
+
+
+
+
+
+
+    </STYLE>
+   <body style="
+   margin: 0;
+   padding-left: 70px;
+   padding-top: 40px;
+   background-color: rgb(250, 246, 246);
+  
+   ">
+    
+   
+
+
+
+
+    <div class="HEADER">
+        <DIV CLASS="RIGHT-SECTION">
+           
+                <IMG CLASS="YOUTUBE2"SRC="C:\Users\USER\Downloads\hamburger png.png" >
+                    <DIV CLASS="HUMBERGUER-CONTAINER">
+
+                    <div class="search-hambburgger">search for hamburger </div>
+            </DIV>
+            
+                <IMG CLASS ="YOUTUBE"SRC="C:\Users\USER\Downloads\youtube2 png.png" >
+             </DIV>
+
+
+
+        <DIV CLASS="MIDDLE-SECTION">
+
+            <input CLASS="SEARCH-BAR" type="text"placeholder="SEARCH">
+
+            <button CLASS="SEARCH-BUTTON">
+                <img CLASS="SEARCH-ICON" src="C:\Users\USER\Downloads\search icon jpg.jpg">
+                <DIV CLASS="tooltip">Search</DIV>
+                </button>
+                <button CLASS="VOICE-BUTTON">
+                    <img  CLASS="VOICE-ICON"src="C:\Users\USER\Downloads\VOICE png.png">
+                    <DIV CLASS="search-voice">search with your voice</DIV>
+                </button>
+        </DIV>
+
+
+        <div class="LEFT-SECTION"> 
+
+            <IMG CLASS="UNDER" src="C:\Users\USER\Downloads\INSTAGRAM png.png">
+
+                <DIV CLASS="APP-CONTAINER"> 
+                    <IMG  CLASS="APP"src="C:\Users\USER\Downloads\apps png.png">
+                        <DIV CLASS="APP-SEARCH">Search for App</DIV>
+                </DIV>
+                
+                
+                    <IMG  CLASS="NOTIFICATION"src="C:\Users\USER\Downloads\notification png.png">
+                    <img CLASS="PROFILE-PICTURE" src="C:\Users\USER\OneDrive\Pictures\THUMB3.JPG">   
+
+                 </div>
+          </div>
+
+
+          <div class="sidebar">
+
+<div class="sidebar-icon">
+    <img src="C:\Users\USER\Downloads\house icon.png">
+    <div>Home</div>
+</div>
+<div class="sidebar-icon">
+    <img src="C:\Users\USER\Downloads\house icon.png">
+    <div>Explore</div>
+</div>
+<div class="sidebar-icon">
+    <img src="C:\Users\USER\Downloads\house icon.png">
+    <div>Subscription</div>
+</div>
+<div class="sidebar-icon">
+    <img src="C:\Users\USER\Downloads\house icon.png">
+    <div>Oranginal</div>
+</div>
+<div class="sidebar-icon">
+    <img src="C:\Users\USER\Downloads\house icon.png">
+    <div>Youtube music</div>
+</div>
+<div class="sidebar-icon">
+    <img src="C:\Users\USER\Downloads\house icon.png">
+    <div>Libary</div>
+</div>
+          </div>
+
+
+
+
+
+
+<div  class="VIDEO-GRID">
+    <DIV CLASS="MAINOR-SECTION">
+        <DIV CLASS="BIG-PICTURE">
+            <IMG CLASS="BIG-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMBNI.JPG">
+        </DIV>        
+    
+        <DIV CLASS="SMALL-PICTURE">
+            <IMG CLASS="SMALL-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMB3.JPG">
+         </DIV>
+        <DIV  CLASS="VIDEO-CHANNEL">
+            <P class="VIDEO-TITLE">EXECUTIVE MANAGER REMEMBER NOHING WORKING  UNLESS YUO DO IT &#x2E; </P>
+            <p CLASS=VIDEO-AUTHOR>NO ONE WILL STOP TO BE SUCCESSFUL JUST KEEP GIONG YOU ARE AMAZING &#10003;</p> 
+            <p CLASS="VIDEO-STATIC">PERSEVERANCE IS THE KEY  3&#x2E; </p>  
+             </DIV> 
+            </DIV>
+    
+
+    <DIV CLASS="MAIN-SECTION">
+
+        <DIV CLASS="BIG-PICTURE">
+            <IMG CLASS="BIG-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMBNI.JPG">
+        </DIV>        
+    
+        <DIV CLASS="SMALL-PICTURE">
+            <IMG CLASS="SMALL-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMB3.JPG">
+         </DIV>
+    
+       
+        <DIV  CLASS="VIDEO-CHANNEL">
+            <P class="VIDEO-TITLE">Everyone want to be sucessfull but not everyone knows how to achive succeed &#x2E; </P>
+            <p CLASS=VIDEO-AUTHOR>NO ONE WILL STOP TO BE SUCCESSFUL JUST KEEP GIONG YOU ARE AMAZING &#10003;</p> 
+            <p CLASS="VIDEO-STATIC">PERSEVERANCE IS THE KEY  3&#x2E; </p>  
+            
+            </DIV>
+    </DIV>
+
+      
+
+    <DIV CLASS="MAINOR-SECTION">
+        <DIV CLASS="BIG-PICTURE">
+            <IMG CLASS="BIG-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMBNI.JPG">
+        </DIV>        
+    
+        <DIV CLASS="SMALL-PICTURE">
+            <IMG CLASS="SMALL-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMB3.JPG">
+         </DIV>
+        <DIV  CLASS="VIDEO-CHANNEL">
+            <P class="VIDEO-TITLE">EXECUTIVE MANAGER REMEMBER NOHING WORKING  UNLESS YUO DO IT &#x2E; </P>
+            <p CLASS=VIDEO-AUTHOR>NO ONE WILL STOP TO BE SUCCESSFUL JUST KEEP GIONG YOU ARE AMAZING &#10003;</p> 
+            <p CLASS="VIDEO-STATIC">PERSEVERANCE IS THE KEY  3&#x2E; </p>  
+             </DIV> 
+            </DIV>
+
+
+
+    
+    <DIV CLASS="MAIN-SECTION">
+
+        <DIV CLASS="BIG-PICTURE">
+            <IMG CLASS="BIG-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMBNI.JPG">
+        </DIV>        
+    
+        <DIV CLASS="SMALL-PICTURE">
+            <IMG CLASS="SMALL-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMB3.JPG">
+         </DIV>
+    
+       
+        <DIV  CLASS="VIDEO-CHANNEL">
+            <P class="VIDEO-TITLE">Everyone want to be sucessfull but not everyone knows how to achive succeed &#x2E; </P>
+            <p CLASS=VIDEO-AUTHOR>NO ONE WILL STOP TO BE SUCCESSFUL JUST KEEP GIONG YOU ARE AMAZING &#10003;</p> 
+            <p CLASS="VIDEO-STATIC">PERSEVERANCE IS THE KEY  3&#x2E; </p>  
+            
+            </DIV>
+    </DIV>
+
+
+
+
+
+
+
+
+
+
+    <DIV CLASS="MAINOR-SECTION">
+        <DIV CLASS="BIG-PICTURE">
+            <IMG CLASS="BIG-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMBNI.JPG">
+        </DIV>        
+    
+        <DIV CLASS="SMALL-PICTURE">
+            <IMG CLASS="SMALL-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMB3.JPG">
+         </DIV>
+        <DIV  CLASS="VIDEO-CHANNEL">
+            <P class="VIDEO-TITLE">EXECUTIVE MANAGER REMEMBER NOHING WORKING  UNLESS YUO DO IT &#x2E; </P>
+            <p CLASS=VIDEO-AUTHOR>NO ONE WILL STOP TO BE SUCCESSFUL JUST KEEP GIONG YOU ARE AMAZING &#10003;</p> 
+            <p CLASS="VIDEO-STATIC">PERSEVERANCE IS THE KEY  3&#x2E; </p>  
+             </DIV> 
+            </DIV>
+
+
+
+    
+    <DIV CLASS="MAIN-SECTION">
+
+        <DIV CLASS="BIG-PICTURE">
+            <IMG CLASS="BIG-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMBNI.JPG">
+        </DIV>        
+    
+        <DIV CLASS="SMALL-PICTURE">
+            <IMG CLASS="SMALL-IMAGE" SRC="C:\Users\USER\OneDrive\Pictures\THUMB3.JPG">
+         </DIV>
+    
+       
+        <DIV  CLASS="VIDEO-CHANNEL">
+            <P class="VIDEO-TITLE">Everyone want to be sucessfull but not everyone knows how to achive succeed &#x2E; </P>
+            <p CLASS=VIDEO-AUTHOR>NO ONE WILL STOP TO BE SUCCESSFUL JUST KEEP GIONG YOU ARE AMAZING &#10003;</p> 
+            <p CLASS="VIDEO-STATIC">PERSEVERANCE IS THE KEY  3&#x2E; </p>  
+            
+            </DIV>
+    </DIV>
+
+
+</div>
+
+    
+
+
+</body>
+
+</html>
